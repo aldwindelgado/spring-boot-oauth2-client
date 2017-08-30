@@ -1,14 +1,12 @@
 spring:
     application:
-        name: oauth2-client
+        name: spring-boot-oauth2-client
     mvc:
         favicon:
             enabled: false
         throw-exception-if-no-handler-found: true
     main:
         banner-mode: 'off'
-#management:
-#    context_path: /admin
 security:
     oauth2:
         resource:
