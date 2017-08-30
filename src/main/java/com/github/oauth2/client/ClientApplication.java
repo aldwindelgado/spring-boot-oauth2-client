@@ -56,7 +56,6 @@ public class ClientApplication extends WebSecurityConfigurerAdapter {
         RemoteTokenServices tokenServices = new RemoteTokenServices();
         tokenServices.setClientId("account");
         tokenServices.setClientSecret("password");
-//        tokenServices.setTokenName("tokenName");
         tokenServices.setCheckTokenEndpointUrl("http://localhost:8080/oauth/check_token");
         return tokenServices;
     }
