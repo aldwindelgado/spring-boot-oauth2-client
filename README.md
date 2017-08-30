@@ -28,5 +28,5 @@ curl -X POST -H "Authorization: Basic YWNjb3VudDpwYXNzd29yZA=="  -H "Content-Typ
 ```
 curl -H "Authorization: Bearer <access token>" -v localhost:8081
 ```
-
-See [spring-boot-oauth2](https://github.com/aldwindelgado/spring-boot-oauth2) for running the oauth-server (authorization server)
+## Authorization Server
+See [spring-boot-oauth2-server](https://github.com/aldwindelgado/spring-boot-oauth2-server) for running the oauth-server (authorization server)
