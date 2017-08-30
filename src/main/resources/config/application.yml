@@ -22,3 +22,10 @@ server:
     error:
         whitelabel:
             enabled: false
+
+oauth2:
+    clientId: sampleclient
+    clientSecret: samplepassword
+    resourceId: sample-resource
+    paths:
+        check_token: http://localhost:8080/v1/oauth2/check_token

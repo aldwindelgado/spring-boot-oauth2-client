@@ -5,6 +5,7 @@
  */
 package com.github.oauth2.client;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -31,6 +32,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ClientApplication extends WebSecurityConfigurerAdapter {
 
+    @Value("${oauth2.clientId}")
+    private String clientId;
+
+    @Value("${oauth2.clientSecret}")
+    private String clientSecret;
+
+    @Value("${oauth2.paths.check_token}")
+    private String checkTokenPath;
+
     public static void main(String[] args) {
         SpringApplication.run(ClientApplication.class, args);
     }
@@ -54,10 +64,9 @@ public class ClientApplication extends WebSecurityConfigurerAdapter {
     @Bean
     public ResourceServerTokenServices tokenServices() {
         RemoteTokenServices tokenServices = new RemoteTokenServices();
-        tokenServices.setClientId("account");
-        tokenServices.setClientSecret("password");
-//        tokenServices.setTokenName("tokenName");
-        tokenServices.setCheckTokenEndpointUrl("http://localhost:8080/oauth/check_token");
+        tokenServices.setClientId(clientId);
+        tokenServices.setClientSecret(clientSecret);
+        tokenServices.setCheckTokenEndpointUrl(checkTokenPath);
         return tokenServices;
     }
 
