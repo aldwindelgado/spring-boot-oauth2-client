@@ -30,4 +30,4 @@ curl -H "Authorization: Bearer <access token>" -v localhost:8081
 ```
 
 ## Authorization Server (JDBC branch)
-See [spring-boot-oauth2-server](https://github.com/aldwindelgado/spring-boot-oauth2-server) for running the oauth-server (authorization server)
+See [spring-boot-oauth2-server](https://github.com/aldwindelgado/spring-boot-oauth2-server/tree/jdbc) for running the oauth-server (authorization server)
