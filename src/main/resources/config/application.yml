@@ -24,8 +24,9 @@ server:
             enabled: false
 
 oauth2:
-    clientId: sampleclient
+    clientId: sample
     clientSecret: samplepassword
     resourceId: sample-resource
     paths:
         check_token: http://localhost:8080/v1/oauth2/check_token
+        resource_file_uri: key/jwt_oauth2_key.pub
