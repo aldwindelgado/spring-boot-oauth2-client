@@ -29,5 +29,5 @@ curl -X POST -H "Authorization: Basic c2FtcGxlY2xpZW50OnNhbXBsZXBhc3N3b3Jk"  -H 
 curl -H "Authorization: Bearer <access token>" -v localhost:8081
 ```
 
-## Authorization Server (JDBC branch)
-See [spring-boot-oauth2-server](https://github.com/aldwindelgado/spring-boot-oauth2-server/tree/jdbc) for running the oauth-server (authorization server)
+## Authorization Server (JWT branch)
+See [spring-boot-oauth2-server](https://github.com/aldwindelgado/spring-boot-oauth2-server/tree/jwt) for running the oauth-server (authorization server)
